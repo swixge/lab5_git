@@ -1,11 +1,11 @@
 ﻿  Source.cpp
-C:\Users\jugyr\OneDrive\Рабочий стол\5lab_pop-main\openMpDemo\Source.cpp(28,11): warning C4477: "printf": в строке форматирования "%d" требуется аргумент типа "int", но вариативный аргумент "2" имеет тип "__int64"
-C:\Users\jugyr\OneDrive\Рабочий стол\5lab_pop-main\openMpDemo\Source.cpp(28,11): message : рекомендуется использовать "%lld" в строке форматирования
-C:\Users\jugyr\OneDrive\Рабочий стол\5lab_pop-main\openMpDemo\Source.cpp(28,11): message : рекомендуется использовать "%Id" в строке форматирования
-C:\Users\jugyr\OneDrive\Рабочий стол\5lab_pop-main\openMpDemo\Source.cpp(28,11): message : рекомендуется использовать "%I64d" в строке форматирования
-C:\Users\jugyr\OneDrive\Рабочий стол\5lab_pop-main\openMpDemo\Source.cpp(34,11): warning C4477: "printf": в строке форматирования "%d" требуется аргумент типа "int", но вариативный аргумент "2" имеет тип "__int64"
-C:\Users\jugyr\OneDrive\Рабочий стол\5lab_pop-main\openMpDemo\Source.cpp(34,11): message : рекомендуется использовать "%lld" в строке форматирования
-C:\Users\jugyr\OneDrive\Рабочий стол\5lab_pop-main\openMpDemo\Source.cpp(34,11): message : рекомендуется использовать "%Id" в строке форматирования
-C:\Users\jugyr\OneDrive\Рабочий стол\5lab_pop-main\openMpDemo\Source.cpp(34,11): message : рекомендуется использовать "%I64d" в строке форматирования
-C:\Users\jugyr\OneDrive\Рабочий стол\5lab_pop-main\openMpDemo\Source.cpp(48,46): warning C4267: =: преобразование из "size_t" в "int"; возможна потеря данных
-  openMpDemo.vcxproj -> C:\Users\jugyr\OneDrive\Рабочий стол\5lab_pop-main\x64\Debug\openMpDemo.exe
+D:\3.2\Paralelni OP (e) (24)\lab5_git\openMpDemo\Source.cpp(29,11): warning C4477: "printf": в строке форматирования "%d" требуется аргумент типа "int", но вариативный аргумент "2" имеет тип "__int64"
+D:\3.2\Paralelni OP (e) (24)\lab5_git\openMpDemo\Source.cpp(29,11): message : рекомендуется использовать "%lld" в строке форматирования
+D:\3.2\Paralelni OP (e) (24)\lab5_git\openMpDemo\Source.cpp(29,11): message : рекомендуется использовать "%Id" в строке форматирования
+D:\3.2\Paralelni OP (e) (24)\lab5_git\openMpDemo\Source.cpp(29,11): message : рекомендуется использовать "%I64d" в строке форматирования
+D:\3.2\Paralelni OP (e) (24)\lab5_git\openMpDemo\Source.cpp(35,11): warning C4477: "printf": в строке форматирования "%d" требуется аргумент типа "int", но вариативный аргумент "2" имеет тип "__int64"
+D:\3.2\Paralelni OP (e) (24)\lab5_git\openMpDemo\Source.cpp(35,11): message : рекомендуется использовать "%lld" в строке форматирования
+D:\3.2\Paralelni OP (e) (24)\lab5_git\openMpDemo\Source.cpp(35,11): message : рекомендуется использовать "%Id" в строке форматирования
+D:\3.2\Paralelni OP (e) (24)\lab5_git\openMpDemo\Source.cpp(35,11): message : рекомендуется использовать "%I64d" в строке форматирования
+D:\3.2\Paralelni OP (e) (24)\lab5_git\openMpDemo\Source.cpp(52,46): warning C4267: =: преобразование из "size_t" в "int"; возможна потеря данных
+  openMpDemo.vcxproj -> D:\3.2\Paralelni OP (e) (24)\lab5_git\x64\Debug\openMpDemo.exe
