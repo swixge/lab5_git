@@ -26,13 +26,13 @@ int main() {
 #pragma omp section
 		{
 			long long x = part_min(0, arr_size, sizeThread);
-			printf("minsum %d = %d \n", sizeThread, x);
+			printf("minsum (CountThread = %d) = %d \n", sizeThread, x);
 		}
 		
 #pragma omp section
 		{
 			long long x = part_sum(0, arr_size, sizeThread);
-			printf("sum %d = %d \n", sizeThread , x);
+			printf("sum (CountThread = %d) = %d \n", sizeThread, x);
 
 		}
 	}
@@ -53,16 +53,16 @@ void init_arr() {
 		}
 	}
 
-	arr[arr_size / 2][arr_size/2] = -100; 
+	arr[arr_size / 2][arr_size / 2] = 100; 
 }
 
 //============================================================================================================================================================
-
+// виконує обчислення суми всіх елементів в двовимірному масиві
 long long part_sum(int start_index, int finish_index, int num_threads) {
 
 		long long sum = 0;
 		double t1 = omp_get_wtime();
-#pragma omp parallel for reduction(+:sum) num_threads(num_threads)	
+#pragma omp parallel for reduction(+:sum) num_threads(num_threads)	//директива вказує, що наступний цикл for має виконуватися паралельно за допомогою багатьох потоків(num_threads), потрібно використовувати операцію + для обчислення суми всіх елементів у змінній sum в кожному потоці.
 		for (int i = start_index; i < finish_index; i++) {			
 			for (size_t j = 0;  j < arr_size;  j++)
 			{
@@ -80,6 +80,7 @@ long long part_sum(int start_index, int finish_index, int num_threads) {
 long long part_min(int start_index, int finish_index, int num_threads) {
 
 		long long minsum = INT32_MAX;
+		int min_row = -1; 
 		double t1 = omp_get_wtime();
 #pragma omp parallel for num_threads(num_threads)
 		for (int i = start_index; i < finish_index; i++) {
@@ -91,15 +92,17 @@ long long part_min(int start_index, int finish_index, int num_threads) {
 		
 			if (minsum > sum)
 			{
-#pragma omp critical
+#pragma omp critical // доступ ло блоку коду всереденні critical може бути здійснений лише одним поток(одночасно)
 				if (minsum > sum)
 				{
+					min_row = i;
 					minsum = sum;
 				}
 			}
 		}
 		double t2 = omp_get_wtime();
 		printf("min sum time - %F seconds \n", t2 - t1);
+		printf("Row with minimum sum: %d\n", min_row);
 
 
 		return minsum;
